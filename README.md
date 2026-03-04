@@ -19,7 +19,7 @@ High Fiber Food
 2. Restore dependencies and build the solution:
 
    ```bash
-   dotnet build HighFiberDiet.slnx
+   dotnet build HighFiberDiet.sln
    ```
 
 3. Run the web application:
@@ -36,5 +36,5 @@ High Fiber Food
 ### Running Tests
 
 ```bash
-dotnet test HighFiberDiet.slnx
+dotnet test HighFiberDiet.sln
 ```
