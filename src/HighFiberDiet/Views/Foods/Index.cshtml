@@ -1,0 +1,54 @@
+@model IEnumerable<HighFiberDiet.Models.Food>
+
+@{
+    ViewData["Title"] = "High Fiber Foods";
+    string? search = ViewData["Search"] as string;
+}
+
+<h1>High Fiber Foods</h1>
+
+<form method="get" asp-controller="Foods" asp-action="Index" class="mb-4">
+    <div class="input-group" style="max-width: 400px;">
+        <input type="text" name="search" value="@search" class="form-control" placeholder="Search foods..." />
+        <button type="submit" class="btn btn-success">Search</button>
+        @if (!string.IsNullOrWhiteSpace(search))
+        {
+            <a asp-controller="Foods" asp-action="Index" class="btn btn-outline-secondary">Clear</a>
+        }
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        No foods found matching "@search". <a asp-controller="Foods" asp-action="Index">View all foods</a>.
+    </div>
+}
+else
+{
+    <div class="food-grid">
+        @foreach (var food in Model)
+        {
+            <div class="food-card">
+                <a asp-controller="Foods" asp-action="Details" asp-route-id="@food.Id" class="food-card-link">
+                    <div class="food-card-image-container">
+                        @if (System.IO.File.Exists(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "foods", food.ImageFileName)))
+                        {
+                            <img src="~/images/foods/@food.ImageFileName" alt="@food.Name" class="food-card-image" />
+                        }
+                        else
+                        {
+                            <div class="food-card-placeholder">
+                                <span>🥗</span>
+                            </div>
+                        }
+                    </div>
+                    <div class="food-card-body">
+                        <h5 class="food-card-title">@food.Name</h5>
+                        <p class="food-card-fiber">@food.FiberAmountGrams g fiber per 100 g</p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+}
