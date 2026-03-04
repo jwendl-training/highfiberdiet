@@ -91,4 +91,16 @@ public class FoodRepositoryTests
             Assert.False(string.IsNullOrWhiteSpace(food.ImageFileName));
         }
     }
+
+    [Fact]
+    public void AllFoods_HaveImageUrl()
+    {
+        var foods = _repository.GetAll();
+
+        foreach (var food in foods)
+        {
+            Assert.False(string.IsNullOrWhiteSpace(food.ImageUrl), $"{food.Name} is missing an ImageUrl");
+            Assert.StartsWith("https://", food.ImageUrl, StringComparison.OrdinalIgnoreCase);
+        }
+    }
 }

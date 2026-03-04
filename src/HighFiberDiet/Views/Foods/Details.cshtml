@@ -13,7 +13,11 @@
 
 <div class="food-detail">
     <div class="food-detail-image-container">
-        @if (System.IO.File.Exists(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "foods", Model.ImageFileName)))
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" alt="@Model.Name" class="food-detail-image" />
+        }
+        else if (System.IO.File.Exists(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "foods", Model.ImageFileName)))
         {
             <img src="~/images/foods/@Model.ImageFileName" alt="@Model.Name" class="food-detail-image" />
         }

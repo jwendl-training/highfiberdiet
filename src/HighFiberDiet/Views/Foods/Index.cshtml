@@ -32,7 +32,11 @@ else
             <div class="food-card">
                 <a asp-controller="Foods" asp-action="Details" asp-route-id="@food.Id" class="food-card-link">
                     <div class="food-card-image-container">
-                        @if (System.IO.File.Exists(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "foods", food.ImageFileName)))
+                        @if (!string.IsNullOrEmpty(food.ImageUrl))
+                        {
+                            <img src="@food.ImageUrl" alt="@food.Name" class="food-card-image" />
+                        }
+                        else if (System.IO.File.Exists(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "foods", food.ImageFileName)))
                         {
                             <img src="~/images/foods/@food.ImageFileName" alt="@food.Name" class="food-card-image" />
                         }
