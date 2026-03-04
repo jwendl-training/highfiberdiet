@@ -150,6 +150,6 @@ The following user stories are derived from [`requirements.md`](requirements.md)
 - [ ] Each food in the seed data has a corresponding image file in `wwwroot/images/foods/`.
 - [ ] Images are displayed on both the food list page (thumbnail) and the food detail page (larger view).
 - [ ] If an image file is missing, the UI shows a meaningful fallback (e.g., placeholder text or a default image).
-- [ ] Images are optimised for web (reasonable file size).
+- [ ] Images are optimized for web (reasonable file size).
 
 ---
