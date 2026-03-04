@@ -101,6 +101,86 @@ public class FoodRepository
             FiberAmountGrams = 3.8m,
             Description = "Brussels sprouts are cruciferous vegetables loaded with fiber, vitamins K and C, and beneficial plant compounds.",
             ImageFileName = "brussels-sprouts.png"
+        },
+        new Food
+        {
+            Id = 13,
+            Name = "Kidney Beans",
+            FiberAmountGrams = 6.4m,
+            Description = "Kidney beans are large, red legumes named for their distinctive shape. They are rich in fiber, protein, and folate, and are a popular ingredient in chili and stews.",
+            ImageFileName = "kidney-beans.png"
+        },
+        new Food
+        {
+            Id = 14,
+            Name = "Navy Beans",
+            FiberAmountGrams = 10.5m,
+            Description = "Navy beans, also called haricot beans, are small white legumes that are an excellent source of dietary fiber and protein, commonly used in baked beans.",
+            ImageFileName = "navy-beans.png"
+        },
+        new Food
+        {
+            Id = 15,
+            Name = "Edamame",
+            FiberAmountGrams = 5.2m,
+            Description = "Edamame are young, green soybeans harvested before they ripen. They are high in fiber, plant-based protein, and various vitamins and minerals.",
+            ImageFileName = "edamame.png"
+        },
+        new Food
+        {
+            Id = 16,
+            Name = "Sweet Potato",
+            FiberAmountGrams = 3.0m,
+            Description = "Sweet potatoes are root vegetables rich in fiber, beta-carotene, vitamins C and B6, and potassium. Eating the skin further boosts fiber content.",
+            ImageFileName = "sweet-potato.png"
+        },
+        new Food
+        {
+            Id = 17,
+            Name = "Artichoke",
+            FiberAmountGrams = 8.6m,
+            Description = "Artichokes are one of the highest-fiber vegetables available. They are also rich in antioxidants, folate, and vitamin K, and support liver health.",
+            ImageFileName = "artichoke.png"
+        },
+        new Food
+        {
+            Id = 18,
+            Name = "Raspberries",
+            FiberAmountGrams = 6.5m,
+            Description = "Raspberries are a delicious berry packed with dietary fiber, vitamin C, and powerful antioxidants that help combat inflammation.",
+            ImageFileName = "raspberries.png"
+        },
+        new Food
+        {
+            Id = 19,
+            Name = "Flaxseeds",
+            FiberAmountGrams = 27.3m,
+            Description = "Flaxseeds are tiny seeds loaded with omega-3 fatty acids, lignans, and a high amount of both soluble and insoluble fiber.",
+            ImageFileName = "flaxseeds.png"
+        },
+        new Food
+        {
+            Id = 20,
+            Name = "Sunflower Seeds",
+            FiberAmountGrams = 8.6m,
+            Description = "Sunflower seeds are a nutritious snack high in fiber, vitamin E, magnesium, and healthy fats that support cardiovascular health.",
+            ImageFileName = "sunflower-seeds.png"
+        },
+        new Food
+        {
+            Id = 21,
+            Name = "Brown Rice",
+            FiberAmountGrams = 3.5m,
+            Description = "Brown rice is a whole grain that retains its bran and germ layers, providing more fiber, vitamins, and minerals than refined white rice.",
+            ImageFileName = "brown-rice.png"
+        },
+        new Food
+        {
+            Id = 22,
+            Name = "Kale",
+            FiberAmountGrams = 3.6m,
+            Description = "Kale is a leafy green superfood packed with fiber, vitamins A, C, and K, calcium, and powerful antioxidants that support bone and eye health.",
+            ImageFileName = "kale.png"
         }
     ];
 
